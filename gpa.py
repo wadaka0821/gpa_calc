@@ -1,11 +1,5 @@
-<<<<<<< HEAD
-
-class score:
-    pass
-    
-=======
 import re
-import  score.Score as Score
+import  score
 
 filename = list()
 options = {1:"ファイルの追加",2:"ファイルの削除",3:"ファイル操作",4:"終了"}
@@ -14,7 +8,7 @@ while True:
     if filename == list():
         print("Nothing")
     for i,j in enumerate(filename,1):
-        print(str(i).ljust(3),"|",j)
+        print(str(i).ljust(3),"|",j[0])
     print("--------------options--------------")
     for i,j in options.items():
         print(str(i).ljust(3),"|",j.center(15))
@@ -26,7 +20,7 @@ while True:
             str1 = input("追加したいファイル名を入力してください(csv形式)\n")
             find = re.search(r".+\.csv",str1)
             if find:
-                filename.append([str1,Score(str1)])
+                filename.append([str1,score.Score(str1)])
                 break
             else:
                 print("ファイル名に誤りがあります")
@@ -48,4 +42,3 @@ while True:
         break
     else:
         print("入力されたオプション番号に誤りがあります")
->>>>>>> 8196bd962d125b73a4983f2309d474748012a304
