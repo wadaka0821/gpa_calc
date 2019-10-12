@@ -10,8 +10,14 @@ class Score:
             print("-------options("+self.filename+")-------")
             for i,j in options.items():
                 print(str(i).ljust(3),"|",j.rjust(10))
-            print("----------------------------------------")
+            print("------------------------------------")
             str1 = input()
 
             if str1 == "1":
-                pass
+                self.show_score()
+
+    def show_score(self):
+        with open(self.filename,"rw") as f:
+            reader = csv.reader(f)
+            for i in reader:
+                print(i)
