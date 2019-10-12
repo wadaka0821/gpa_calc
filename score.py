@@ -1,3 +1,5 @@
+import csv
+
 class Score:
     def __init__(self,name):
         self.filename = name
@@ -8,4 +10,8 @@ class Score:
             print("-------options("+self.filename+")-------")
             for i,j in options.items():
                 print(str(i).ljust(3),"|",j.rjust(10))
-            input()
+            print("----------------------------------------")
+            str1 = input()
+
+            if str1 == "1":
+                pass
