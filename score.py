@@ -8,10 +8,8 @@ class Score:
 
     def __init__(self,name):
         self.filename = name
-<<<<<<< HEAD
+
         self.gpa = gpa_calc.Gpa_calc(self.filename)
-=======
->>>>>>> bbd14deb6835f59ae9a9838f58ace7588c119f5c
 
     def menu(self):
         while True:
@@ -26,11 +24,7 @@ class Score:
             elif str1 == "2":
                 self.set_score()
             elif str1 == "3":
-<<<<<<< HEAD
                 self.gpa.menu()
-=======
-                gpa_calc(self.filename)
->>>>>>> bbd14deb6835f59ae9a9838f58ace7588c119f5c
             elif str1 == "4":
                 break
             else:
