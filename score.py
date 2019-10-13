@@ -8,7 +8,6 @@ class Score:
 
     def __init__(self,name):
         self.filename = name
-
         self.gpa = gpa_calc.Gpa_calc(self.filename)
 
     def menu(self):
