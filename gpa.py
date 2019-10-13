@@ -34,7 +34,10 @@ while True:
                 print("入力されたインデックスに誤りがあります")
     elif str1 == "3":
         str1 = input("操作したいファイルのインデックスを入力してください\n")
-        filename[int(str1)-1][1].menu()
+        try:
+            filename[int(str1)-1][1].menu()
+        except:
+            print("入力されたインデックスに誤りがあります")
     elif str1 == "4":
         break
     else:
