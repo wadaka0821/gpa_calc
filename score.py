@@ -38,7 +38,7 @@ class Score:
         print("-----------------------------")
 
     def set_score(self):
-        scores = input("（講義名）:（評価[F-S]）で入力してください（複数のときは半角スペースで区切る）\n")
+        scores = input("（講義名）:（評価[F-S]）:（単位数）で入力してください（複数のときは半角スペースで区切る）\n")
         scores = scores.split()
         error = list()
         with open(self.filename,"a") as f:
@@ -46,7 +46,7 @@ class Score:
 
             for i in scores:
                 temp = re.split(r"[:：]",i)
-                if len(temp) != 2 or temp[1] not in Score.score_list:
+                if len(temp) != 3 or temp[1] not in Score.score_list:
                     error.append(i)
                 else:
                     writer.writerow(temp)
